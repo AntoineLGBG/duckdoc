@@ -1,0 +1,2 @@
+class Duckmon < ApplicationRecord
+end

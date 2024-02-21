@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @duckmon %>
+
+<div>
+  <%= link_to "Edit this duckmon", edit_duckmon_path(@duckmon) %> |
+  <%= link_to "Back to duckmons", duckmons_path %>
+
+  <%= button_to "Destroy this duckmon", @duckmon, method: :delete %>
+</div>

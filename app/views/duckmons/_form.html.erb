@@ -1,0 +1,52 @@
+<%= form_with(model: duckmon) do |form| %>
+  <% if duckmon.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(duckmon.errors.count, "error") %> prohibited this duckmon from being saved:</h2>
+
+      <ul>
+        <% duckmon.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_area :image %>
+  </div>
+
+  <div>
+    <%= form.label :health_point, style: "display: block" %>
+    <%= form.number_field :health_point %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :damages, style: "display: block" %>
+    <%= form.number_field :damages %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :attack_name, style: "display: block" %>
+    <%= form.text_field :attack_name %>
+  </div>
+
+  <div>
+    <%= form.label :attack_description, style: "display: block" %>
+    <%= form.text_area :attack_description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
